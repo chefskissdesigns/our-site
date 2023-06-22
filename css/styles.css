@@ -1,3 +1,23 @@
-header {
-    background-color: #AC2276;
+:root {
+    --primary-magnolia: #fcf7ff;
+    --secondary-sapphire: #0f52ba;
+    --tertiary-fandango: #ac2276;
+    --quarternary-fluorescent-cyan: #6fffe9;
+    --quinary-rose-quartz: #a4969b;
+}
+
+header, footer {
+    background-color: var(--tertiary-fandango);
+}
+
+header>h1, footer>h4 {
+    color: var(--primary-magnolia);
+}
+
+footer>a, footer>a:visited {
+    color: var(--secondary-sapphire);
+}
+
+footer>a:hover {
+    color: var(--quarternary-fluorescent-cyan);
 }
