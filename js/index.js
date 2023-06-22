@@ -8,7 +8,7 @@ function setCopyYearElement(element, yearString) {
 }
 
 function getCurrentYear() {
-    const curYear = new Date().getFullYear.toString();
+    const curYear = new Date().getFullYear().toString();
     return curYear;
 }
 
