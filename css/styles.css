@@ -18,6 +18,6 @@ footer>h4>a, footer>h4>a:visited {
     color: var(--secondary-sapphire);
 }
 
-footer>a:hover {
+footer>h4>a:hover {
     color: var(--quarternary-fluorescent-cyan);
 }
