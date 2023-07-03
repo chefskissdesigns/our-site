@@ -4,6 +4,8 @@
     --tertiary-fandango: #ac2276;
     --quarternary-fluorescent-cyan: #6fffe9;
     --quinary-rose-quartz: #a4969b;
+    --shade-color: rgba(0, 0, 0. 0.5);
+    --pop-up-color: rgba(105, 196, 199, 0.85);
 }
 
 header, footer {

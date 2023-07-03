@@ -1,0 +1,102 @@
+@media screen and (min-width: 320px) {
+
+	#blackdrop {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	#close {
+		display: block;
+		color: darkred;
+	}
+
+	#foreground {
+		position: relative;
+	}
+
+	#ageCalcSection {
+		display: grid;
+		grid-template-columns: 40vw 40vw;
+		grid-template-rows: 5vh 5vh;
+		justify-items: center;
+	}
+
+	#foreground #ageCalcSection label, #foreground #ageCalcSection h2 {
+		grid-row: 1 / 2;
+	}
+
+	#foreground #ageCalcSection #show-privacy-button, #foreground #ageCalcSection #conversion {
+		grid-row: 2 / 3;
+	}
+
+	#foreground #ageCalcSection h2, #foreground #ageCalcSection #show-privacy-button {
+		grid-column: 1 / 2;
+	}
+
+	#foreground #ageCalcSection label, #foreground #ageCalcSection #conversion {
+		grid-column: 2 / 3;
+	}
+
+	#privacy-modal, #blackdrop {
+		margin: 0 auto;
+	}
+
+	#privacy-header {
+		position: fixed;
+		margin: 0 auto auto;
+		height: 5vh;
+		width: 33vw;
+		box-sizing: border-box;
+		background-color: darkorange;
+	}
+
+	#privacy-modal #privacy-header {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+
+	#privacy-modal {
+		grid-template-columns: 1fr;
+		background-color: tan;
+		width: fit-content;
+		max-width: 35vw;
+		max-height: 67vh;
+		margin-top: 12.5vh;
+		overflow: auto; 
+	}
+
+	#privacy-modal p {
+		padding: 1em;
+	}
+
+	#privacy-modal p:nth-of-type(1) {
+		margin-top: 7vh;
+	}
+
+	#privacy-modal div h3 {
+		max-width: fit-content;
+	}
+
+	#privacy-modal div h3, #privacy-modal div input {
+		margin: 0;
+	}
+
+	html {
+		padding: 1em;
+	}
+
+	header {
+		margin: 0 auto;
+	}
+
+	label {
+		align-content: center;
+	}
+}

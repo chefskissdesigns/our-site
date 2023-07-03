@@ -1,0 +1,6 @@
+def getBlogFileAsTXT(txtFile):
+    ...
+
+def writeToBlogFile(blogFile):
+    ...
+
