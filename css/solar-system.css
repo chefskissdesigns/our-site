@@ -1,0 +1,198 @@
+:root {
+    --rotations-per-minute: 5;
+    --viewport-width-height: 65vw;
+    --earth-year: 365;
+    --moon-rotation: calc(27.32 / 365);
+    --solar-rotation: var(--rotations-per-minute) * 60;
+    --moon-solar-rotation: calc(var(--moon-rotation) * var(--solar-rotation) * 1s);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: calc(var(--viewport-width-height));
+    height: calc(var(--viewport-width-height));
+    position: absolute;
+}
+.sun {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: calc(var(--viewport-width-height) * .1);
+    height: calc(var(--viewport-width-height) * .1);
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+.sun, 
+.mercury, .venus,
+.earth,.moon,
+.mars, .asteroid-belt, .jupiter,
+.saturn, .uranus,
+.neptune {
+    display: flex;
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.mercury {
+    width: calc(var(--viewport-width-height) * .15);
+    height: calc(var(--viewport-width-height) * .15); 
+    animation: orbit calc(var(--solar-rotation) * 88s / var(--earth-year)) linear infinite;
+}
+.venus {
+    width: calc(var(--viewport-width-height) * .23);
+    height: calc(var(--viewport-width-height) * .23); 
+    animation: orbit calc(var(--solar-rotation) * 225s / var(--earth-year)) linear infinite;
+}
+.earth {
+    width: calc(var(--viewport-width-height) * .33);
+    height: calc(var(--viewport-width-height) * .33); 
+    animation: orbit calc(var(--solar-rotation) * 365s / var(--earth-year)) linear infinite;
+}
+.moon {
+    top: calc(var(--viewport-width-height) * 0.0125); 
+    right: calc(var(--viewport-width-height) * 0.0125);
+    width: calc(var(--viewport-width-height) * .075);
+    height: calc(var(--viewport-width-height) * .075); 
+    animation: orbit var(--moon-solar-rotation) linear infinite;
+}
+.mars {
+    width: calc(var(--viewport-width-height) * .44);
+    height: calc(var(--viewport-width-height) * .44); 
+    animation: orbit calc(var(--solar-rotation) * 687s / var(--earth-year)) linear infinite;
+}
+.asteroid-belt {
+    width: calc(var(--viewport-width-height) * .515);
+    height: calc(var(--viewport-width-height) * .515); 
+    animation: orbit calc(var(--solar-rotation) * 2737.5s / var(--earth-year)) linear infinite;
+    border-color: red transparent transparent transparent;
+    border-top-width: 0.25em;
+    border-right-width: 0.1em;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-radius: 50%;
+}
+.jupiter {
+    width: calc(var(--viewport-width-height) * .61);
+    height: calc(var(--viewport-width-height) * .61); 
+    animation: orbit calc(var(--solar-rotation) * 4333s / var(--earth-year)) linear infinite;
+}
+.saturn {
+    width: calc(var(--viewport-width-height) * .72);
+    height: calc(var(--viewport-width-height) * .72); 
+    animation: orbit calc(var(--solar-rotation) * 10759s / var(--earth-year)) linear infinite;
+}
+.uranus {
+    width: calc(var(--viewport-width-height) * .872);
+    height: calc(var(--viewport-width-height) * .872); 
+    animation: orbit calc(var(--solar-rotation) * 30687s / var(--earth-year)) linear infinite;
+}
+.neptune {
+    width: calc(var(--viewport-width-height) * .979);
+    height: calc(var(--viewport-width-height) * .979); 
+    animation: orbit calc(var(--solar-rotation) * 60190s / var(--earth-year)) linear infinite;
+}
+
+/*
+	<div>::before's
+*/
+
+.mercury::before, .venus::before,
+.earth::before, .moon::before,
+.mars::before, .asteroid-belt::before, .jupiter::before,
+.saturn::before, .uranus::before,
+.neptune::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.mercury::before {
+    top: calc(var(--viewport-width-height) * .015);
+    right: calc(var(--viewport-width-height) * .015);
+    width: calc(var(--viewport-width-height) * .015);
+    height: calc(var(--viewport-width-height) * .015);
+    background-color: beige;   
+}
+.venus::before {
+    top: calc(var(--viewport-width-height) * .022);
+    right: calc(var(--viewport-width-height) * .022);
+    width: calc(var(--viewport-width-height) * .022);
+    height: calc(var(--viewport-width-height) * .022);
+    background-color: rgb(199 199 136);
+}
+.earth::before {
+    top: calc(var(--viewport-width-height)*.033);
+    right: calc(var(--viewport-width-height)*.033);
+    width: calc(var(--viewport-width-height)*.033);
+    height: calc(var(--viewport-width-height)*.033);
+    background-color: rgb(0, 255, 255);    
+}
+.moon::before {
+    top: calc(var(--viewport-width-height) * .006);
+    right: calc(var(--viewport-width-height) * .006);
+    width: calc(var(--viewport-width-height) * .01);
+    height: calc(var(--viewport-width-height) * .01);
+    background-color: rgb(192, 192, 192);
+}
+.mars::before {
+    top: calc(var(--viewport-width-height) * .056);
+    right: calc(var(--viewport-width-height) * .056);
+    width: calc(var(--viewport-width-height) * .0165);
+    height: calc(var(--viewport-width-height) * .0165);
+    background-color: rgb(213, 56, 8);    
+}
+.asteroid-belt::before {
+    top: calc(var(--viewport-width-height) * .022);
+    right: calc(var(--viewport-width-height) * .022);
+    width: calc(var(--viewport-width-height) * .0415);
+    height: calc(var(--viewport-width-height) * .0415);
+    border-color: rgba(213, 56, 8, 1);
+    border-width: 2em; 
+}
+.jupiter::before {
+    top: calc(var(--viewport-width-height) * .067015);
+    right: calc(var(--viewport-width-height) * .067015);
+    width: calc(var(--viewport-width-height) * .047015);
+    height: calc(var(--viewport-width-height) * .047015);
+    background-color: rgb(255, 99, 71);    
+}
+.saturn::before {
+    top: calc(var(--viewport-width-height) * .0880015);
+    right: calc(var(--viewport-width-height) * .0880015);
+    width: calc(var(--viewport-width-height) * .0357015);
+    height: calc(var(--viewport-width-height) * .0357015);
+    background-color: rgb(175, 238, 238);    
+}
+.uranus::before {
+    top: calc(var(--viewport-width-height) * .112015);
+    right: calc(var(--viewport-width-height) * .112015);
+    width: calc(var(--viewport-width-height) * .032015);
+    height: calc(var(--viewport-width-height) * .032015);
+    background-color: rgb(100, 149, 237);    
+}
+.neptune::before {
+    top: calc(var(--viewport-width-height) * .13);
+    right: calc(var(--viewport-width-height) * .13);
+    width: calc(var(--viewport-width-height) * .0290015);
+    height: calc(var(--viewport-width-height) * .0290015);
+    background-color: rgb(0, 206, 209);    
+}
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
