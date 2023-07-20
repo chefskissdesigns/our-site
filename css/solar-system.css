@@ -50,12 +50,12 @@ body {
 .mercury {
     width: calc(var(--viewport-width-height) * .15);
     height: calc(var(--viewport-width-height) * .15); 
-    /*animation: orbit calc(1s / var(--rotations-per-minute) * var(--earth-year) / 88 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 88) linear infinite;
 }
 .venus {
     width: calc(var(--viewport-width-height) * .23);
     height: calc(var(--viewport-width-height) * .23); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 225 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 225) linear infinite;
 }
 .earth {
     width: calc(var(--viewport-width-height) * .33);
@@ -67,17 +67,17 @@ body {
     right: calc(var(--viewport-width-height) * 0.0125);
     width: calc(var(--viewport-width-height) * .075);
     height: calc(var(--viewport-width-height) * .075); 
-    animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 27.32) linear infinite;
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 27.32) linear infinite;
 }
 .mars {
     width: calc(var(--viewport-width-height) * .44);
     height: calc(var(--viewport-width-height) * .44); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 687 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 687) linear infinite;
 }
 .asteroid-belt {
     width: calc(var(--viewport-width-height) * .515);
     height: calc(var(--viewport-width-height) * .515); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 2737.5 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 2737.5) linear infinite;
     border-color: red transparent transparent transparent;
     border-top-width: 0.25em;
     border-right-width: 0.1em;
@@ -88,22 +88,22 @@ body {
 .jupiter {
     width: calc(var(--viewport-width-height) * .61);
     height: calc(var(--viewport-width-height) * .61); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 4333 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 4333) linear infinite;
 }
 .saturn {
     width: calc(var(--viewport-width-height) * .72);
     height: calc(var(--viewport-width-height) * .72); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 10759 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 10759) linear infinite;
 }
 .uranus {
     width: calc(var(--viewport-width-height) * .872);
     height: calc(var(--viewport-width-height) * .872); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 30687 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 30687) linear infinite;
 }
 .neptune {
     width: calc(var(--viewport-width-height) * .979);
     height: calc(var(--viewport-width-height) * .979); 
-    /*animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 60190 * 3600) linear infinite;*/
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 60190) linear infinite;
 }
 
 /*
