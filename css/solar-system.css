@@ -68,7 +68,7 @@ body {
     right: calc(var(--viewport-width-height) * 0.0125);
     width: calc(var(--viewport-width-height) * .075);
     height: calc(var(--viewport-width-height) * .075); 
-    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 27.32s) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) * 1 / 27.32s) linear infinite;
 }
 .mars {
     width: calc(var(--viewport-width-height) * .44);
