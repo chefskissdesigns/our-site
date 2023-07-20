@@ -60,7 +60,7 @@ body {
 .earth {
     width: calc(var(--viewport-width-height) * .33);
     height: calc(var(--viewport-width-height) * .33); 
-    animation: orbit calc(1s * var(--rotations-per-minute) * var(--earth-year) / 365) linear infinite;
+    animation: orbit calc(1s * 60 * var(--rotations-per-minute) * var(--earth-year) / 365) linear infinite;
 }
 .moon {
     top: calc(var(--viewport-width-height) * 0.0125); 
