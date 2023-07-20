@@ -1,5 +1,5 @@
 :root {
-    --rotations-per-minute: 100;
+    --rotations-per-minute: 1;
     --viewport-width-height: 65vw;
     --earth-year: 365;
     --moon-rotation: calc(27.32 / 365);
@@ -51,34 +51,34 @@ body {
 .mercury {
     width: calc(var(--viewport-width-height) * .15);
     height: calc(var(--viewport-width-height) * .15); 
-    animation: orbit calc(var(--solar-rotation) * 88s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 88s) linear infinite;
 }
 .venus {
     width: calc(var(--viewport-width-height) * .23);
     height: calc(var(--viewport-width-height) * .23); 
-    animation: orbit calc(var(--solar-rotation) * 225s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 225s) linear infinite;
 }
 .earth {
     width: calc(var(--viewport-width-height) * .33);
     height: calc(var(--viewport-width-height) * .33); 
-    animation: orbit calc(var(--solar-rotation) * 365s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 365s) linear infinite;
 }
 .moon {
     top: calc(var(--viewport-width-height) * 0.0125); 
     right: calc(var(--viewport-width-height) * 0.0125);
     width: calc(var(--viewport-width-height) * .075);
     height: calc(var(--viewport-width-height) * .075); 
-    animation: orbit var(--moon-solar-rotation) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 27.32s) linear infinite;
 }
 .mars {
     width: calc(var(--viewport-width-height) * .44);
     height: calc(var(--viewport-width-height) * .44); 
-    animation: orbit calc(var(--solar-rotation) * 687s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 687s) linear infinite;
 }
 .asteroid-belt {
     width: calc(var(--viewport-width-height) * .515);
     height: calc(var(--viewport-width-height) * .515); 
-    animation: orbit calc(var(--solar-rotation) * 2737.5s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 2737.5s) linear infinite;
     border-color: red transparent transparent transparent;
     border-top-width: 0.25em;
     border-right-width: 0.1em;
@@ -89,22 +89,22 @@ body {
 .jupiter {
     width: calc(var(--viewport-width-height) * .61);
     height: calc(var(--viewport-width-height) * .61); 
-    animation: orbit calc(var(--solar-rotation) * 4333s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 4333s) linear infinite;
 }
 .saturn {
     width: calc(var(--viewport-width-height) * .72);
     height: calc(var(--viewport-width-height) * .72); 
-    animation: orbit calc(var(--solar-rotation) * 10759s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 10759s) linear infinite;
 }
 .uranus {
     width: calc(var(--viewport-width-height) * .872);
     height: calc(var(--viewport-width-height) * .872); 
-    animation: orbit calc(var(--solar-rotation) * 30687s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 30687s) linear infinite;
 }
 .neptune {
     width: calc(var(--viewport-width-height) * .979);
     height: calc(var(--viewport-width-height) * .979); 
-    animation: orbit calc(var(--solar-rotation) * 60190s / var(--earth-year)) linear infinite;
+    animation: orbit calc(var(--solar-rotation) * var(--earth-year) / 60190s) linear infinite;
 }
 
 /*
