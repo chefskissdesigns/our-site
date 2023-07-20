@@ -1,5 +1,5 @@
 :root {
-    --rotations-per-minute: calc(6000);
+    --rotations-per-minute: 6000;
     --viewport-width-height: 65vw;
     --earth-year: 365;
     --moon-rotation: calc(27.32 / 365);
