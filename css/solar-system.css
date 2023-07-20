@@ -3,7 +3,7 @@
     --viewport-width-height: 65vw;
     --earth-year: 365;
     --moon-rotation: calc(27.32 / 365);
-    --solar-rotation: var(--rotations-per-minute);
+    --solar-rotation: calc(var(--rotations-per-minute) * 1);
     --moon-solar-rotation: calc(var(--moon-rotation) * var(--solar-rotation) * 1s);
 }
 
